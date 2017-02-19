@@ -1,0 +1,20 @@
+<h2>Search Star Wars Database</h2>
+
+<form name="searchStarWars" ng-submit="search()">
+  <div>
+    <label for="searchPhrase">Search</label>
+    <input type="text" 
+          ng-model="searchPhrase"
+          name="searchPhrase"
+          placeholder="search some people, starships or films form Star Wars Universe">
+    <button type="submit">Search</button>
+  </div>
+  <span ng-repeat="category in searchCategories track by $index">
+    <input type="radio" 
+           name="searchCategory"
+           ng-model="searchCategory"
+           ng-value="category"
+           ng-change="categoryChange(category)">
+    <label for="searchCategory">{{ category }}</label>
+  </span>
+</form>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ngStarWars</title>  
+</head>
+<link rel="stylesheet" href="app.style.css">
+<body ng-controller="mainViewCtrl">
+  <h1>ngStarWars</h1>
+  <nav>
+    <a href="#!">Home</a>
+    <a href="#!search">Search</a>
+  </nav>
+
+  <main ng-view></main>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+  
+  <script src="app.module.js"></script>
+  <script src="app.controller.js"></script>
+
+  <script src="search/search.module.js"></script>
+  <script src="search/search.service.js"></script>
+  <script src="search/search-list/search.controller.js"></script>
+
+  
+</body>
+</html>
